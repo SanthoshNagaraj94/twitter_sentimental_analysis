@@ -21,9 +21,7 @@ app.config['UPLOAD_FOLDER'] =  UPLOAD_FOLDER
 def home():
     return render_template('home.html')
 
-@app.route('/predict',methods=['POST'])
-
-
+@app.route('/result',methods=['POST'])
 def predict():
     if request.method == 'POST':
         uploaded_file = request.files['myfile']
